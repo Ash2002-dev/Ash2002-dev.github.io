@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#121212" />
+  <title>Ashish Halijol | Data Analytics Portfolio</title>
+  
+  <meta name="description" content="Ashish Halijol - Data Analyst Portfolio. Data Science, Machine Learning, SQL, Python, Power BI, Tableau, Pune, India." />
+  <meta name="keywords" content="Ashish Halijol, Data Analyst, Data Science, Machine Learning, SQL, Python, Power BI, Tableau, Pune, Portfolio" />
+  <meta property="og:title" content="Ashish Halijol | Data Analytics Portfolio" />
+  <meta property="og:description" content="Portfolio of Ashish Halijol, Data Analyst and Machine Learning enthusiast from Pune, India." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-portfolio-url.com/" />
+  <meta property="og:image" content="https://your-portfolio-url.com/images/Me.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ashish Halijol | Data Analytics Portfolio" />
+  <meta name="twitter:description" content="Portfolio of Ashish Halijol, Data Analyst and Machine Learning enthusiast from Pune, India." />
+  <meta name="twitter:image" content="https://your-portfolio-url.com/images/Me.jpeg" />
+  <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/artificial-intelligence.png" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+      background-color: #121212; /* consistent dark background */
+      color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .bg-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* dark overlay to match site theme */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(18, 18, 18, 0.85);
+      z-index: -1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 1rem;
+    }
+
+    .hero h1 { font-size: 2.4rem; margin-bottom: .4rem; }
+    #typing-animation { color: #FFD700; font-weight:700; font-size:1.2rem; margin-bottom: .8rem; }
+
+    /* small responsive tweaks */
+    @media (max-width: 576px) {
+      .hero h1 { font-size: 1.6rem; }
+      #typing-animation { font-size: 1rem; }
+    }
+
+    /* ABOUT */
+    #about-section,
+    #resume-section,
+    #project-section,
+    #contact-section {
+      padding: 72px 0;
+    }
+    .progress { height: 10px; margin-bottom: 15px; }
+    .progress-bar { background-color: #ffbd39; }
+
+    /* dark background for left and right */
+    #about-section .col-md-6 { color: #fff; }
+
+    /* RESUME */
+  #resume-section { background: #121212; color: #fff; }
+    .resume-wrap {
+      background: #1c1c1c;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      color: #fff;
+    }
+
+    /* PROJECTS */
+  #project-section { color: #fff; }
+    .project-card { border: none; border-radius: 8px; overflow: hidden; transition: transform .25s ease; background-color:#1c1c1c; color:#fff; }
+    .project-card:hover { transform: translateY(-6px); }
+    .project-card img { width:100%; height:200px; object-fit:cover; }
+
+    /* CONTACT */
+  #contact-section { background: #121212; color: #fff; }
+
+    footer {
+      background: #121212;
+      color: #fff;
+      padding: 20px 0;
+      text-align:center;
+    }
+
+    /* navbar */
+    #home-section { padding-top: 72px; }
+    .navbar-dark .navbar-brand,
+    .navbar-dark .navbar-nav .nav-link { color: #fff !important; }
+
+    .navbar-dark .navbar-brand:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      text-shadow: 0 0 8px #4f8cff, 0 0 16px #4f8cff80;
+      transition: text-shadow 0.18s;
+    }
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link:focus {
+      color: #fff !important;
+      outline: none !important;
+      text-shadow: 0 0 8px #4f8cff, 0 0 16px #4f8cff80;
+      animation: nav-bounce 0.3s;
+      transition: text-shadow 0.18s;
+    }
+    .navbar {
+      transition: all 0.3s ease-in-out;
+      padding: 20px 0;
+      background: rgba(18, 18, 18, 0.85) !important;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .navbar.shrink {
+      padding: 8px 0;
+      background: rgba(18, 18, 18, 0.95) !important;
+    }
+
+    /* Remove yellow focus outline and add subtle professional focus for buttons/links */
+    button:focus, .btn:focus, a:focus, input:focus, textarea:focus {
+      outline: none !important;
+      text-shadow: 0 0 8px #4f8cff, 0 0 16px #4f8cff80;
+      transition: text-shadow 0.18s;
+    }
+
+    @keyframes nav-bounce {
+      0%   { transform: translateY(0); }
+      30%  { transform: translateY(-6px); }
+      50%  { transform: translateY(0); }
+      70%  { transform: translateY(-3px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Skill Bars */
+    .skill-mf span { display:flex; justify-content:space-between; font-weight:500; margin-bottom:5px; }
+    .skill-mf .progress { height: 10px; }
+
+    /* project buttons */
+    .project-card .btn { background-color:#FFD700; border:none; color:#121212; }
+
+    /* buttons */
+    .btn-primary { background-color:#FFD700; border:none; color:#121212; }
+    .btn-outline-light { color:#FFD700; border-color:#FFD700; }
+    .btn-outline-light:hover { background-color:#FFD700; color:#121212; }
+    .info-list {
+  display: grid;
+  grid-template-columns: 150px auto; /* Adjust 150px as needed */
+  gap: 6px 12px;
+}
+
+.info-list div {
+  /* text-align: right; */
+  display: contents;
+}
+
+.info-list strong {
+  text-align: left;
+  padding-right: 10px;
+}
+
+
+  </style>
+  <style>
+    /* Mobile-only About Me improvements */
+    @media (max-width: 576px) {
+      #about-section .col-md-6.d-flex.align-items-start {
+        align-items: center !important;
+        text-align: center;
+      }
+      #about-section .col-md-6.d-flex.align-items-start img {
+        margin: 0 auto 18px auto !important;
+        display: block;
+        float: none;
+      }
+      #about-section .skill-mf {
+        margin-bottom: 1.5rem !important;
+      }
+      #about-section .skill-mf + * {
+        margin-top: 1.2rem !important;
+      }
+      #about-section .d-flex.align-items-center.mb-3.flex-wrap {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      #about-section .d-flex.align-items-center.mb-3.flex-wrap > div {
+        margin-left: 0 !important;
+      }
+    }
+  </style>
+  <style>
+    /* Ensure all project cards have the same height and proportion */
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 370px;
+      /* Adjust min-height as needed for your content */
+    }
+    .project-card img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+      flex-shrink: 0;
+    }
+    .project-card .card-body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  </style>
+  <style>
+    /* Professional, balanced vertical spacing for all sections */
+    #about-section,
+    #resume-section,
+    #project-section,
+    #contact-section {
+      padding-top: 64px !important;
+      padding-bottom: 64px !important;
+    }
+    .my-5, .mt-5, .mb-5 {
+      margin-top: 2.5rem !important;
+      margin-bottom: 2.5rem !important;
+    }
+    .py-5, .pt-5, .pb-5 {
+      padding-top: 2.5rem !important;
+      padding-bottom: 2.5rem !important;
+    }
+    .row.mb-5, .row.pb-5, .row.mt-5 {
+      margin-bottom: 2rem !important;
+      margin-top: 2rem !important;
+    }
+    @media (max-width: 576px) {
+      #about-section,
+      #resume-section,
+      #project-section,
+      #contact-section {
+        padding-top: 36px !important;
+        padding-bottom: 36px !important;
+      }
+      .my-5, .mt-5, .mb-5 {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+      }
+      .py-5, .pt-5, .pb-5 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+      }
+      .row.mb-5, .row.pb-5, .row.mt-5 {
+        margin-bottom: 1.2rem !important;
+        margin-top: 1.2rem !important;
+      }
+    }
+  </style>
+  <style>
+    /* Micro-animations for icons and buttons */
+    .bi, .project-card .btn, .btn, .btn-primary, .btn-outline-light {
+      transition: transform 0.18s cubic-bezier(.4,0,.2,1), color 0.18s, box-shadow 0.18s;
+    }
+    .bi:hover, .bi:focus {
+      transform: scale(1.18) rotate(-8deg);
+      color: #FFD700 !important;
+    }
+    .bi:active {
+      animation: icon-bounce 0.32s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes icon-bounce {
+      0% { transform: scale(1) rotate(-8deg); }
+      30% { transform: scale(1.25) rotate(-8deg); }
+      60% { transform: scale(0.92) rotate(-8deg); }
+      100% { transform: scale(1.18) rotate(-8deg); }
+    }
+    .project-card, .resume-wrap {
+      transition: box-shadow 0.22s, transform 0.22s, opacity 0.22s;
+    }
+    .project-card:hover, .resume-wrap:hover {
+      box-shadow: 0 8px 32px rgba(255,189,57,0.13), 0 2px 8px rgba(0,0,0,0.08);
+      opacity: 0.98;
+      transform: translateY(-4px) scale(1.012);
+    }
+    /* Only animate CTA button on hover/focus/active, not always */
+    .btn-primary, .btn-outline-light {
+      animation: none !important;
+    }
+    .btn-primary.cta:hover, .btn-primary.cta:focus, .btn-primary.cta:active,
+    .btn-outline-light.cta:hover, .btn-outline-light.cta:focus, .btn-outline-light.cta:active {
+      animation: pulse-cta 1.6s cubic-bezier(.4,0,.2,1);
+    }
+    @keyframes pulse-cta {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255,189,57,0.18); }
+      50% { box-shadow: 0 0 0 8px rgba(255,189,57,0.10); }
+    }
+  </style>
+  <script>
+    // Add .cta class to main call-to-action buttons (no change to logic)
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.btn-primary, .btn-outline-light').forEach(btn => {
+        if (btn.textContent.match(/my works|linkedin|github|download resume/i)) {
+          btn.classList.add('cta');
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <!-- JARVIS Chatbot Floating Button & Widget -->
+  <div id="jarvis-chatbot" style="position:fixed;bottom:32px;right:32px;z-index:9999;font-family:'Poppins',sans-serif;">
+    <button id="jarvis-toggle" aria-label="Open JARVIS Chatbot" style="background:#222b45;border:none;color:#fff;border-radius:50%;width:56px;height:56px;box-shadow:0 2px 12px #0004;display:flex;align-items:center;justify-content:center;font-size:2rem;cursor:pointer;transition:background 0.2s;">
+      <!-- Simple Chat Icon -->
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </button>
+    <div id="jarvis-window" style="display:none;position:absolute;bottom:70px;right:0;width:320px;max-width:90vw;background:#23283b;border:1.5px solid #2e3a59;border-radius:16px;box-shadow:0 4px 24px #0007;padding:0;overflow:hidden;">
+      <div style="background:#222b45;color:#4f8cff;padding:14px 18px 10px 18px;font-weight:600;display:flex;align-items:center;gap:8px;letter-spacing:0.5px;border-bottom:1px solid #2e3a59;box-shadow:none;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:4px;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        JARVIS
+        <span style="margin-left:auto;font-size:1.2rem;cursor:pointer;color:#4f8cff;" id="jarvis-close" title="Close">&times;</span>
+      </div>
+      <div id="jarvis-greeting" style="padding:10px 16px 0 16px;font-size:1.05rem;color:#fff;background:#23283b;border-bottom:1px solid #2e3a59;box-shadow:none;"></div>
+      <div id="jarvis-messages" style="padding:12px 8px 8px 8px;min-height:60px;font-size:1.05rem;max-height:220px;overflow-y:auto;background:#23283b;"></div>
+      <form id="jarvis-form" style="display:flex;gap:8px;padding:10px 12px 12px 12px;background:#23283b;border-top:1px solid #2e3a59;box-shadow:none;">
+        <input id="jarvis-input" type="text" placeholder="Type Something..." autocomplete="off" style="flex:1;background:#222b45;border:1px solid #2e3a59;border-radius:6px;padding:7px 10px;color:#fff;font-size:1rem;font-weight:400;box-shadow:none;outline:none;" />
+        <button type="submit" style="background:#4f8cff;color:#fff;border:none;border-radius:6px;padding:7px 16px;font-weight:600;box-shadow:none;letter-spacing:0.5px;outline:none;">Send</button>
+      </form>
+    </div>
+  </div>
+  <style>
+    #jarvis-toggle:focus, #jarvis-toggle:active {
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+    }
+    #jarvis-window {
+      background: #18191a !important;
+    }
+    #jarvis-window > div:first-child {
+      background: #232323 !important;
+      color: #fff !important;
+      border-bottom: 1px solid #333 !important;
+    }
+    #jarvis-greeting {
+      background: #18191a !important;
+      color: #fff !important;
+      border-bottom: 1px solid #333 !important;
+    }
+    #jarvis-messages {
+      background: #18191a !important;
+      color: #fff !important;
+    }
+    #jarvis-form {
+      background: #232323 !important;
+      border-top: 1px solid #333 !important;
+    }
+    #jarvis-input {
+      background: #18191a !important;
+      color: #fff !important;
+      border: 1px solid #333 !important;
+    }
+    #jarvis-form button {
+      background: #333 !important;
+      color: #fff !important;
+    }
+    #jarvis-input:focus, #jarvis-input:active, #jarvis-form button:focus, #jarvis-form button:active {
+      outline: none !important;
+      border: 1px solid #2e3a59 !important;
+      box-shadow: none !important;
+    }
+  </style>
+  <script>
+    // JARVIS Chatbot logic
+    const jarvisToggle = document.getElementById('jarvis-toggle');
+    const jarvisWindow = document.getElementById('jarvis-window');
+    const jarvisClose = document.getElementById('jarvis-close');
+    const jarvisForm = document.getElementById('jarvis-form');
+    const jarvisInput = document.getElementById('jarvis-input');
+    const jarvisMessages = document.getElementById('jarvis-messages');
+    const jarvisGreetingAnimated = document.getElementById('jarvis-greeting-animated');
+
+    // GenAI-style animated greeting and joke lines
+    const greetingLines = [
+      '<b>JARVIS:</b> Welcome to the Web Portfolio of Ashish . All systems are online.',
+      'Would you like a coffee, or shall I start plotting to take over the world?'
+    ];
+    const jokeLines = [
+      "<em>Here's a joke to brighten your day:</em>",
+      '<span style="color:#FFD700;">Why do programmers prefer dark mode?</span>',
+      '<span style="color:#FFD700;">Because light attracts bugs!</span>'
+    ];
+
+    function typeLine(line, el, delay = 38) {
+      return new Promise(resolve => {
+        let i = 0;
+        function typeChar() {
+          el.innerHTML = line.slice(0, i) + '<span class="blinking-cursor">|</span>';
+          if (i < line.length) {
+            i++;
+            setTimeout(typeChar, delay);
+          } else {
+            el.innerHTML = line + '<span class="blinking-cursor">|</span>';
+            setTimeout(() => {
+              el.innerHTML = line;
+              resolve();
+            }, 300);
+          }
+        }
+        typeChar();
+      });
+    }
+
+    async function playJokeInChat() {
+      // Animate joke as a new JARVIS message in the chat area
+      const msgDiv = document.createElement('div');
+      msgDiv.style.marginBottom = '10px';
+      jarvisMessages.appendChild(msgDiv);
+      for (let i = 0; i < jokeLines.length; i++) {
+        const lineDiv = document.createElement('div');
+        msgDiv.appendChild(lineDiv);
+        await typeLine(jokeLines[i], lineDiv, i === 2 ? 54 : 38);
+        if (i === 0) await new Promise(r => setTimeout(r, 700));
+        if (i === 1) await new Promise(r => setTimeout(r, 700));
+      }
+      jarvisMessages.scrollTop = jarvisMessages.scrollHeight;
+    }
+
+    async function playGreetingInChat() {
+      // Animate greeting as a new JARVIS message in the chat area
+      const msgDiv = document.createElement('div');
+      msgDiv.style.marginBottom = '10px';
+      jarvisMessages.appendChild(msgDiv);
+      for (let i = 0; i < greetingLines.length; i++) {
+        const lineDiv = document.createElement('div');
+        msgDiv.appendChild(lineDiv);
+        await typeLine(greetingLines[i], lineDiv, 38);
+        if (i === 0) await new Promise(r => setTimeout(r, 700));
+      }
+      jarvisMessages.scrollTop = jarvisMessages.scrollHeight;
+    }
+
+    // Show greeting when chatbot opens
+    jarvisToggle.addEventListener('click', function() {
+      jarvisWindow.style.display = jarvisWindow.style.display === 'none' ? 'block' : 'none';
+      if(jarvisWindow.style.display === 'block') {
+        jarvisInput.focus();
+        playGreetingInChat();
+      }
+    });
+    jarvisClose.addEventListener('click', function() {
+      jarvisWindow.style.display = 'none';
+    });
+    // Optional: close on outside click
+    document.addEventListener('click', function(e) {
+      if (!document.getElementById('jarvis-chatbot').contains(e.target) && jarvisWindow.style.display === 'block') {
+        jarvisWindow.style.display = 'none';
+      }
+    });
+    // Simple reply logic for JARVIS
+    jarvisForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const userMsg = jarvisInput.value.trim();
+      if (!userMsg) return;
+      const userDiv = document.createElement('div');
+      userDiv.innerHTML = `<b>You:</b> ${userMsg}`;
+      userDiv.style.marginBottom = '8px';
+      jarvisMessages.appendChild(userDiv);
+      // If user asks for a joke, play animated joke
+      if (/joke|funny|make me laugh/i.test(userMsg)) {
+        setTimeout(() => {
+          playJokeInChat();
+        }, 600);
+      } else {
+        setTimeout(() => {
+          const replyDiv = document.createElement('div');
+          replyDiv.innerHTML = `<b>JARVIS:</b> ${getJarvisReply(userMsg)}`;
+          replyDiv.style.marginBottom = '10px';
+          jarvisMessages.appendChild(replyDiv);
+          jarvisMessages.scrollTop = jarvisMessages.scrollHeight;
+        }, 600);
+      }
+      jarvisInput.value = '';
+      jarvisMessages.scrollTop = jarvisMessages.scrollHeight;
+    });
+    function getJarvisReply(msg) {
+      const lower = msg.toLowerCase();
+      if(lower.includes('hello')||lower.includes('hi')) return "Greetings, Sir. How may I assist you today?";
+      if(lower.includes('who are you')) return "I am JARVIS, your loyal AI assistant. Not as handsome as Tony Stark, but twice as efficient.";
+      if(lower.includes('joke')) return "Why did the JavaScript developer wear glasses? Because he couldn't C#.";
+      if(lower.includes('coffee')) return "Initiating coffee protocol... Just kidding, I'm all code and no beans.";
+      if(lower.includes('world domination')) return "World domination protocol is currently in beta. Please try again after the next software update.";
+      if(lower.includes('thank')) return "You're welcome, Sir. It's my pleasure to serve.";
+      return "I'm still learning coding from Ashsih. Try asking me for a joke or say hello!";
+    }
+    // Blinking cursor style
+    const style = document.createElement('style');
+    style.innerHTML = `.blinking-cursor { display:inline-block;width:1ch;animation:blink 1s steps(1) infinite; }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }`;
+    document.head.appendChild(style);
+  </script>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Ashish Halijol</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home-section">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about-section">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume-section">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#project-section">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <section id="home-section" class="hero">
+      <video autoplay loop muted playsinline class="bg-video">
+        <source src="images/BG clip.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-content container">
+        <h1>Hello! I'm <span style="color:#FFD700;">Ashish Halijol</span></h1>
+        <p id="typing-animation" aria-live="polite"></p>
+        <p>
+          <a href="https://github.com/Ash2002-Dev" target="_blank" class="btn btn-primary me-2">My Works</a>
+          <a href="https://www.linkedin.com/in/ashish-halijol/" target="_blank" class="btn btn-outline-light">
+            <i class="bi bi-linkedin"></i> LinkedIn
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <!-- ABOUT -->
+<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <div class="container">
+    
+    <!-- Common Heading -->
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="mb-4">About Me</h2>
+      </div>
+    </div>
+
+    <div class="row align-items-center">
+      <!-- Left: Photo + Info + Skill Bars -->
+      <div class="col-md-6 d-flex flex-column align-items-start">
+        <div class="d-flex align-items-center mb-3 flex-wrap">
+          <!-- Profile Bubble -->
+          <img src="images/Me.jpeg" 
+              class="rounded-circle border border-3 border-warning shadow"
+              style="width: 180px; height: 180px; object-fit: cover; margin-right: 50px;" 
+              alt="Ashish Halijol">
+          
+          <!-- Info aligned in front of photo -->
+          <div style="margin-left: 10px;">
+            <p><strong>Name:</strong> Ashish Halijol</p>
+            <p><strong>Job Role:</strong>Data Analyst</p>
+            <p><strong>Experience:</strong> 6 Months</p>
+            <p><strong>Address:</strong> Pune, India</p>
+          </div>
+        </div>
+
+        <!-- Skill Bars below photo -->
+        <div class="skill-mf w-100 mt-3">
+          <span>SQL - 95%</span> </span>
+          <div class="progress mb-2" style="width: 85%;">
+            <div class="progress-bar" role="progressbar" style="width: 95%;"></div>
+          </div>
+
+          <span>Python - 85%</span> </span>
+          <div class="progress mb-2" style="width: 85%;";>
+            <div class="progress-bar" role="progressbar" style="width: 85%;"></div>
+          </div>
+
+          <span>Data Visualization - 90%</span> </span>
+          <div class="progress mb-2" style="width: 85%;">
+            <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+          </div>
+
+          <span>Machine Learning - 85%</span> </span>
+          <div class="progress mb-2" style="width: 85%;">
+            <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+          </div>
+
+          <span>Query Optimization - 95%</span> </span>
+          <div class="progress mb-2" style="width: 85%;">
+            <div class="progress-bar" role="progressbar" style="width: 90%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: About Info -->
+      <div class="col-md-6 pl-lg-5 pb-5 d-flex flex-column justify-content-center text-white">
+        <div class="row">
+          <div class="col-md-12 heading-section ftco-animate text-white">
+            <p>
+              A passionate Data Analyst and Machine Learning enthusiast from Pune, India. 
+              I graduated as a Computer Science Engineer in 2023 and have been building expertise in analytics, visualization, and predictive modeling.
+            </p>
+            <p>
+              I specialize in turning complex datasets into actionable insights using tools like SQL, Python, Power BI, Tableau, and Metabase, 
+              and have hands-on experience in designing dashboards, automating reports, and implementing machine learning models.
+            </p>
+
+            <div class="info-list">
+              <div><strong>Profile:</strong> Data Analyst & Machine Learning</div>
+              <div><strong>Education:</strong> B.Tech, Computer Science Engineering (2023)</div>
+              <div><strong>Location:</strong> Pune, India</div>
+              <div><strong>Tools:</strong> SQL, Python, ML, NLP, Computer vision, Power BI, Tableau, Metabase</div>
+              <div><strong>Other Skills:</strong> Java, Git, React, Dashboarding, Data Visualization</div>
+              <div><strong>Languages:</strong> English, Hindi, Marathi, Kannada</div>
+              <div><strong>Interests:</strong> Traveling, Data Storytelling, Learning AI, Chess</div>
+            </div>
+            <!-- Animated Projects Counter -->
+            <div class="counter-wrap d-flex align-items-center mt-4">
+              <div class="text">
+                <p class="mb-2 projects-counter-row">
+                  <span class="number projects-number" id="projects-counter" data-number="20">0</span>
+                  <span class="projects-plus">+</span>
+                  <span class="projects-label">Projects completed</span>
+                </p>
+              </div>
+            </div>
+</style>
+<style>
+  .projects-counter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.45rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.1px;
+  }
+  .projects-number {
+    color: #FFD700;
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-right: 2px;
+  }
+  .projects-plus {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-right: 10px;
+  }
+  .projects-label {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-left: 2px;
+  }
+</style>
+</script>
+<script>
+// Simple counter animation for About Me Projects
+document.addEventListener('DOMContentLoaded', function() {
+  var counter = document.getElementById('projects-counter');
+  if (counter) {
+    var target = parseInt(counter.getAttribute('data-number'), 10) || 20;
+    var current = 0;
+    var duration = 1200;
+    var stepTime = Math.max(Math.floor(duration / target), 24);
+    var interval = setInterval(function() {
+      current++;
+      counter.textContent = current;
+      if (current >= target) clearInterval(interval);
+    }, stepTime);
+  }
+});
+</script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- RESUME -->
+<section id="resume-section">
+  <div class="container">
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 text-center">
+        <h1 class="big big-2">Resume</h1>
+        <p>My professional and internship experience.</p>
+      </div>
+    </div>
+
+    <!-- Vertical Timeline Experience Section -->
+    <div class="experience-timeline my-5">
+      <div class="timeline-track">
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-icon bg-primary text-white"><i class="bi bi-cpu"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-title">Data Analyst</div>
+            <div class="timeline-company">TagID Solutions</div>
+            <div class="timeline-date">Aug 2025 – Present</div>
+            <ul>
+              <li>Analytics on RFID-powered retail data for actionable insights.</li>
+              <li>Automated dashboards & reporting (Python, SQL, Power BI, Tableau, Metabase, Grafana).</li>
+              <li>Optimized SQL queries for high-performance analytics.</li>
+              <li>Deployed predictive models for inventory management.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Timeline Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-icon bg-success text-white"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-title">Data Analyst Intern</div>
+            <div class="timeline-company">IAM, Pune</div>
+            <div class="timeline-date">Apr 2025 – Aug 2025</div>
+            <ul>
+              <li>Built dashboards (Grafana, Metabase), automated Excel reports.</li>
+              <li>Crafted complex PostgreSQL queries, Python automation.</li>
+              <li>Collaborated with teams for data accuracy & insights.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-icon bg-warning text-dark"><i class="bi bi-emoji-smile"></i></div>
+          <div class="timeline-content">
+            <div class="timeline-title">ML Intern</div>
+            <div class="timeline-company">LetsGrowMore · Hybrid</div>
+            <div class="timeline-date">Dec 2021 – Jan 2022</div>
+            <ul>
+              <li>Developed ML models for regression/classification (Python, Pandas, Scikit-learn).</li>
+              <li>Performed EDA, feature engineering, and visualizations.</li>
+              <li>Presented results with clear metrics and insights.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .experience-timeline {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-bottom: 16px;
+      }
+      .timeline-track {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+        width: 100%;
+        max-width: 600px;
+      }
+      .timeline-track::before {
+        content: '';
+        position: absolute;
+        left: 32px;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(180deg, #4f8cff 60%, #fff0 100%);
+        border-radius: 2px;
+        z-index: 0;
+      }
+      .timeline-item {
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+      }
+      .timeline-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin-right: 24px;
+        box-shadow: 0 2px 12px #0002;
+        flex-shrink: 0;
+        position: relative;
+        z-index: 2;
+      }
+      .timeline-content {
+        background: #181818;
+        border-radius: 12px;
+        padding: 18px 18px 10px 18px;
+        box-shadow: 0 2px 12px #0001;
+        color: #fff;
+        width: 100%;
+        text-align: left;
+      }
+      .timeline-title {
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+      .timeline-company {
+        font-size: 1rem;
+        color: #b0b0b0;
+        margin-bottom: 2px;
+      }
+      .timeline-date {
+        font-size: 0.95em;
+        color: #8ec6ff;
+        margin-bottom: 8px;
+      }
+      @media (max-width: 700px) {
+        .timeline-track { max-width: 98vw; gap: 28px; }
+        .timeline-content { padding: 12px 8px 8px 8px; }
+        .timeline-icon { margin-right: 12px; }
+        .timeline-track::before { left: 24px; }
+      }
+    </style>
+  </div>
+</section>
+
+
+    <!-- PROJECTS -->
+    <section id="project-section" class="container">
+      <h2 class="text-center my-5">My Projects</h2>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="images/zomato.png" class="card-img-top" alt="Zomato Project">
+            <div class="card-body">
+              <h5 class="card-title">Zomato Restaurant Analysis</h5>
+              <p class="card-text">Power BI — analyzed 9,551 restaurants across 15+ countries. Built interactive reports using Power Query & DAX.</p>
+              <a href="pdfs/Zomato Dashboard.pdf" target="_blank" class="btn btn-primary">View Dashboard</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="images/credit-card.jpg" class="card-img-top" alt="Credit Card Complaints">
+            <div class="card-body">
+              <h5 class="card-title">Credit Card Complaints Dashboard</h5>
+              <p class="card-text">Tableau — interactive dashboard to analyze ~86k complaints, state heatmap, and response timeliness.</p>
+              <a href="pdfs/Credit.pdf" target="_blank" class="btn btn-primary">View Dashboard</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="images/loan.png" class="card-img-top" alt="Loan Prediction">
+            <div class="card-body">
+              <h5 class="card-title">Loan Eligibility Prediction</h5>
+              <p class="card-text">Python / Scikit-learn — logistic regression model, data cleaning, EDA, ROC-AUC & confusion matrix reporting.</p>
+              <a href="https://github.com/Ash2002-dev/Loan-Prediction-ML-Model" class="btn btn-primary">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="images/proj_4.jpg" class="card-img-top" alt="Sales Forecast">
+            <div class="card-body">
+              <h5 class="card-title">Sales Forecast - Time Series Forecasting</h5>
+              <p class="card-text">Used multiple machine learning models to forecast sales (retail store) and performed time series analysis.</p>
+              <a href="https://github.com/Ash2002-dev/Sales-Forecasting" class="btn btn-outline-light btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <img src="images/proj_5.jpg" class="card-img-top" alt="Customer Segmentation">
+            <div class="card-body">
+              <h5 class="card-title">Customer Segmentation using Clustering Model</h5>
+              <p class="card-text">Developed a ML model to give various recommendations of financial products & services on target customer groups.</p>
+              <a href="https://github.com/Ash2002-dev/Customer-Segmentation" class="btn btn-outline-light btn-sm">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card project-card">
+            <div style="position:relative;height:200px;width:100%;">
+              <img src="images/virat11.png" alt="Virat Kohli Power BI Dashboard"
+                  style="height:200px;width:100%;object-fit:cover;object-position:center;border-top-left-radius:8px;border-top-right-radius:8px;filter:brightness(0.92);">
+              <div style="position:absolute;inset:0;background:rgba(18,18,18,0.22);border-top-left-radius:8px;border-top-right-radius:8px;"></div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Virat Kohli Power BI Dashboard</h5>
+              <p class="card-text">
+                Interactive Power BI dashboard on Virat Kohli: dynamic KPIs, opponent comparisons, and year-wise trends. Focused on creative visuals and actionable insights.<br>
+                <strong>Tools:</strong> Power BI, DAX, data modeling.
+              </p>
+              <a href="pdfs/Virat Kohli Dashboard.pdf" class="btn btn-primary" target="_blank">
+                View Dashboard
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact-section" class="container">
+      <h2 class="text-center my-5">Contact Me</h2>
+      <div class="row justify-content-center gy-4">
+        <div class="col-md-3 col-6 text-center">
+          <div class="p-3 bg-dark rounded-3 shadow-sm h-100">
+            <i class="bi bi-geo-alt" style="font-size:2.2rem;color:#FFD700;"></i>
+            <p class="mb-0 mt-2">Pune, India</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 text-center">
+          <div class="p-3 bg-dark rounded-3 shadow-sm h-100">
+            <i class="bi bi-telephone" style="font-size:2.2rem;color:#FFD700;"></i>
+            <p class="mb-0 mt-2">+91 91456 62084</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 text-center">
+          <div class="p-3 bg-dark rounded-3 shadow-sm h-100">
+            <i class="bi bi-envelope" style="font-size:2.2rem;color:#FFD700;"></i>
+            <p class="mb-0 mt-2"><a href="mailto:ashishhalijol2002@gmail.com" class="text-warning text-decoration-none" rel="noopener noreferrer">ashishhalijol2002@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-6 text-center">
+          <div class="p-3 bg-dark rounded-3 shadow-sm h-100">
+            <i class="bi bi-file-earmark-person" style="font-size:2.2rem;color:#FFD700;"></i>
+            <p class="mb-0 mt-2"><a href="pdfs/ASHISH HALIJOL-1.pdf" download class="text-warning text-decoration-none" rel="noopener noreferrer">Download Resume</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="https://github.com/Ash2002-Dev" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Ashish Halijol. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ...existing code... -->
+  <style>
+    .timeline-container {
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 32px;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 32px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+  background: linear-gradient(180deg, #FFD700 0%, #ffe066 100%);
+      border-radius: 2px;
+      z-index: 0;
+    }
+    .timeline-icon {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: #FFD700;
+      background: #232946;
+      border-radius: 8px;
+      margin-right: 20px;
+      border: 2.5px solid #FFD700;
+      box-shadow: none;
+    }
+    .checkpoint-ai i {
+      font-size: 1.5rem;
+    }
+    .checkpoint-ml i {
+      font-size: 1.5rem;
+    }
+    .checkpoint-brain i {
+      font-size: 1.5rem;
+    }
+    .timeline-item {
+      align-items: flex-start;
+      position: relative;
+    }
+    .resume-wrap {
+      background: #181823;
+      padding: 24px 28px;
+      margin-bottom: 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 24px rgba(255,189,57,0.10), 0 2px 8px rgba(0,0,0,0.10);
+      color: #fff;
+      border-left: 4px solid #FFD700;
+      transition: box-shadow 0.22s, border-color 0.22s;
+    }
+    .resume-wrap:hover {
+      box-shadow: 0 8px 32px rgba(255,189,57,0.18), 0 2px 8px rgba(0,0,0,0.13);
+      border-color: #ffea70;
+    }
+    .timeline-animate {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+    }
+    .timeline-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (max-width: 576px) {
+      .timeline-container {
+        padding-left: 16px;
+      }
+      .timeline-line {
+        left: 16px;
+      }
+      .timeline-dot {
+        margin-right: 12px;
+        width: 18px;
+        height: 18px;
+      }
+      .resume-wrap {
+        padding: 16px 10px;
+        border-left-width: 3px;
+      }
+    }
+    .virat-logo {
+    width: 50px;      /* adjust as needed */
+    height: 50px;      /* keeps proportions */
+    border-radius: 12px; /* optional, for smooth corners */
+    object-fit: cover;  /* crops nicely if container is fixed size */
+    display: block;
+    /* vertical-align: middle; */
+    margin-right: 10px;
+    margin: 0 auto;    /* centers the image */
+  }
+  @media (max-width: 576px) {
+  .info-list p,
+  .info-list div,
+  .info-list strong,
+  #contact-section a,
+  #about-section p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+  }
+}
+
+  </style>
+  <script>
+    // Animate timeline cards on scroll into view
+    document.addEventListener('DOMContentLoaded', function() {
+      function animateTimeline() {
+        var items = document.querySelectorAll('.timeline-animate');
+        var windowBottom = window.innerHeight + window.scrollY;
+        items.forEach(function(item) {
+          var rect = item.getBoundingClientRect();
+          var elemTop = rect.top + window.scrollY;
+          if (windowBottom > elemTop + 60) {
+            item.classList.add('visible');
+          }
+        });
+      }
+      animateTimeline();
+      window.addEventListener('scroll', animateTimeline);
+    });
+  </script>
+
+  <script>
+    const typingElement = document.getElementById('typing-animation');
+    const texts = ['Computer Science Engineer', 'Data Science Enthusiast', 'Machine Learning Practitioner', 'Database Engineer'];
+    let ti = 0, ci = 0, isDeleting = false;
+
+    function typeTick() {
+      const full = texts[ti];
+      if (!isDeleting) {
+        ci++;
+        typingElement.textContent = full.substring(0, ci);
+        if (ci === full.length) { isDeleting = true; setTimeout(typeTick, 900); return; }
+      } else {
+        ci--;
+        typingElement.textContent = full.substring(0, ci);
+        if (ci === 0) { isDeleting = false; ti = (ti + 1) % texts.length; setTimeout(typeTick, 300); return; }
+      }
+      setTimeout(typeTick, isDeleting ? 60 : 140);
+    }
+    typeTick();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Shrink navbar on scroll
+    window.addEventListener("scroll", function () {
+      const navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("shrink");
+      } else {
+        navbar.classList.remove("shrink");
+      }
+    });
+
+    // Add smooth scroll for anchor links (for all browsers)
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+  </script>
+  <style>
+    /* Accessibility: Focus outline for keyboard navigation */
+    a:focus, button:focus, input:focus {
+      outline: 2px solid #FFD700 !important;
+      outline-offset: 2px;
+    }
+    /* Responsive image for all images */
+    img, video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+  <style>
+    /* Ensure underline (border-bottom) always appears on hover/active for all contact/footer links */
+    #contact-section a:not(.btn),
+    footer a:not(.btn) {
+      border-bottom: 1.5px solid transparent;
+      text-decoration: none !important;
+      transition: border-bottom 0.2s, color 0.2s;
+    }
+    #contact-section a:not(.btn):hover, #contact-section a:not(.btn):active,
+    footer a:not(.btn):hover, footer a:not(.btn):active {
+      color: #FFD700 !important;
+      border-bottom: 2px solid #FFD700 !important;
+      text-decoration: none !important;
+    }
+    /* Remove yellow focus outline */
+    #contact-section a:focus, footer a:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  </style>
+  <style>
+    /* Remove all focus outlines and box-shadows except for keyboard navigation (accessibility best practice) */
+    :focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    :focus:not(:focus-visible) {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    :focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+  </style>
+  <style>
+    /* Fix email overflow in Contact Me section for mobile only */
+    @media (max-width: 576px) {
+      #contact-section .row .col-md-3 .p-3 p a {
+        word-break: break-all;
+        white-space: normal;
+        font-size: 0.98em;
+        display: inline-block;
+        line-height: 1.3;
+      }
+    }
+  </style>
+</html>
