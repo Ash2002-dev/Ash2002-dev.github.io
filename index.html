@@ -333,6 +333,15 @@
       0%, 100% { box-shadow: 0 0 0 0 rgba(255,189,57,0.18); }
       50% { box-shadow: 0 0 0 8px rgba(255,189,57,0.10); }
     }
+    /* Mobile-specific styles */
+    @media (max-width: 768px) {
+    .bg-video {
+    display: none; /* hide video on mobile */
+    }
+    .hero {
+    background: url('images/BG-poster.jpg') center/cover no-repeat; /* show poster image */
+    }
+  }
   </style>
   <script>
     // Add .cta class to main call-to-action buttons (no change to logic)
