@@ -56,11 +56,15 @@
 
     .bg-video {
       position: absolute;
-      inset: 0;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -2;
+      z-index: -1;
+      opacity: 1 !important;     /* ensure full opacity */
+      filter: none !important;
+      background: none;
     }
 
     /* dark overlay to match site theme */
@@ -68,7 +72,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-color: rgba(18, 18, 18, 0.85);
+      background-color: rgba(18, 18, 18, 0.3);
       z-index: -1;
     }
 
@@ -569,8 +573,7 @@
     <!-- HERO -->
     <section id="home-section" class="hero">
       <video autoplay loop muted playsinline class="bg-video" preload = "auto" poster="images/BG-poster.jpg">
-        <source src="images/BG clip.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <source src="images/bg-clip.mp4" type="video/mp4">
       </video>
       <div class="hero-content container">
         <h1>Hello! I'm <span style="color:#FFD700;">Ashish Halijol</span></h1>
@@ -585,8 +588,7 @@
     </section>
 
     <!-- ABOUT -->
-    <!-- ABOUT -->
-<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
   <div class="container">
     
     <!-- Common Heading -->
@@ -910,6 +912,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card project-card">
             <img src="images/proj_4.jpg" class="card-img-top" alt="Sales Forecast">
@@ -920,6 +923,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card project-card">
             <img src="images/proj_5.jpg" class="card-img-top" alt="Customer Segmentation">
@@ -930,6 +934,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
           </div>
         </div>
+
         <div class="col-md-4">
           <div class="card project-card">
             <div style="position:relative;height:200px;width:100%;">
@@ -937,6 +942,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   style="height:200px;width:100%;object-fit:cover;object-position:center;border-top-left-radius:8px;border-top-right-radius:8px;filter:brightness(0.92);">
               <div style="position:absolute;inset:0;background:rgba(18,18,18,0.22);border-top-left-radius:8px;border-top-right-radius:8px;"></div>
             </div>
+            
             <div class="card-body">
               <h5 class="card-title">Virat Kohli Power BI Dashboard</h5>
               <p class="card-text">
